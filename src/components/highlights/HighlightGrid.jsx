@@ -58,7 +58,7 @@ const HighlightGrid = () => {
           <div className="bg-neutral-200 shadow rounded-4xl h-full w-full"></div>
         </div>
         <div className="text-neutral-500 h-full text-lg font-inter flex flex-col px-max gap-6 justify-between ">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-black ">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-black ">
             BEST <br /> <span className="text-blue-500">ACM CHAPTER</span>{" "}
             <br /> OF THE YEAR 2024
           </h2>

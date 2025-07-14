@@ -315,7 +315,7 @@ function ProjectCard({ index, project, microBg, cardTextColor }) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ delay: index * 1, duration: 0.3, ease: "easeInOut" }}
-      className="flex flex-col gap-1 p-1 items-center rounded-xl bg-neutral-50 overflow-clip relative group shadow-md cursor-pointer my-20 z-[200]"
+      className="flex flex-col gap-1 p-1 items-center rounded-xl bg-neutral-50 hover:bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-200 overflow-clip relative group shadow-md cursor-pointer my-20 z-[200]"
     >
       <div className="h-full p-1 w-[20rem] lg:w-[30rem] aspect-video overflow-clip relative">
         <img
@@ -346,7 +346,7 @@ function ProjectCard({ index, project, microBg, cardTextColor }) {
               strokeWidth="1.7px"
               className={`size-6 -left-12 group-hover:left-0  relative group-hover:block  transition-all duration-300 ease-in-out `}
             />
-            <p className="relative -left-8 group-hover:left-0 transition-all duration-300 ease-in-out group-hover:underline underline-offset-4">
+            <p className="relative -left-8 group-hover:left-0 transition-all duration-300 ease-in-out ">
               {project.name}
             </p>
           </h2>

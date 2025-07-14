@@ -83,7 +83,7 @@ function LetsConnect() {
 
 function Newsletter() {
   return (
-    <div className="pt-24 pb-4 font-inter">
+    <div className="pt-24 pb-4 px-4 md:px-0 font-inter">
       <h1 className="font-bebas-neue text-5xl md:text-8xl ">
         Join our <span className="text-yellow-400">newsletter</span>
       </h1>
@@ -110,7 +110,7 @@ function Newsletter() {
 
 function FooterNavigation() {
   return (
-    <div className="absolute w-full bottom-0 left-0 py-4.5 px-max border-t border-neutral-700 z-[9999] text-base lg:text-lg">
+    <div className="absolute w-full bottom-0 left-0 py-4.5 px-max border-t border-neutral-700 z-[9999] text-sm lg:text-lg">
       <div className="flex justify-between items-center relative md:top-1 ">
         <a href="/" className="opacity-0 font-inter uppercase flex items-center group cursor-pointer">
           <ChevronLeft size={18} />

@@ -19,14 +19,15 @@ export default function HorizontalScroll() {
         {/* List of events */}
         <motion.div
           style={{ x }}
-          className="relative top-6 flex gap-7 3xl:gap-16 h-full w-[100vw] my-10 lg:my-16 2xl:my-20"
+          className="relative top-10 flex gap-7 3xl:gap-16 h-full w-[100vw] my-10 lg:my-16 2xl:my-20"
         >
           {PastEvents.map((event, i) => (
             <BlurFade key={i} inView>
               <motion.div
                 key={i}
                 whileHover={{ y: -15 }}
-                className={`w-full h-full max-h-[60rem] relative aspect-video  cursor-pointer group `}
+                animate={{x: 150 }}
+                className={`w-full h-full max-h-[60rem] relative aspect-video cursor-pointer group  `}
               >
                 <img
                   src={event.image}

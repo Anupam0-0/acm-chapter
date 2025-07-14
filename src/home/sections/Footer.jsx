@@ -104,7 +104,7 @@ function FooterComponent2() {
       </div>
 
       {/* TERMS N OTHERS */}
-      <div className="capitalize flex gap-8">
+      <div className="capitalize grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8">
         <div>Newsletter</div>
         <div>FAQs</div>
         <div>Terms of Service</div>
