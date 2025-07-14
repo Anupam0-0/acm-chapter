@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/events/:eventId" element={<EventPage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/notice" element={<Newsletter />} />
+        <Route path="/newsletter" element={<Newsletter />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pagenotfound" element={<ErrorPage />} />
         <Route path="*" element={<ErrorPage />} />

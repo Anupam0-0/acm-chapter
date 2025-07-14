@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Img3 from "/public/img1.jpg";
+import Img3 from "/src/assets/img1.jpg";
 import { TextAnimate } from "../../components/magicui/TextAnimate";
 import {
   ArrowRight,
@@ -13,8 +13,6 @@ import {
   Star,
   Users,
 } from "lucide-react";
-import { useState } from "react";
-import { div } from "framer-motion/client";
 
 // Data for projects
 const projectsData = [
@@ -244,14 +242,14 @@ function SidePanel() {
   return (
     <div className="h-[calc(100vh-4.5rem)] sticky top-18 w-1/4 flex items-center justify-center shadow-r-xl bg-blue-500">
       <div className="relative rounded-xl w-full">
-        <div className="flex flex-col justify-between gap-6 h-[calc(100vh-5.5rem)] mx-2 2xl:my-2 bg-neutral-50 text-neutral-950 py-8 px-6 2xl:px-8 relative rounded-xl ">
+        <div className="flex flex-col justify-between 3xl:justify-start 3xl:p-20 3xl:gap-14 gap-6 h-[calc(100vh-5.5rem)] mx-2 2xl:my-2 bg-neutral-50 text-neutral-950 py-8 px-6 2xl:px-8 relative rounded-xl ">
           <h1 className="font-bebas-neue font-black relative text-shadow-xs w-fit z-1  text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
             <span className="text-black">Featured</span> <br />
             <span className="text-blue-500">Projects</span>
           </h1>
-          <p className="text-neutral-800 text-xs lg:text-sm xl:text-base 2xl:mb-6 font-inter relative">
+          <div className="text-neutral-800 text-xs lg:text-sm xl:text-base 2xl:mb-6 font-inter relative">
             <FeaturedCategoryList categories={featuredCategories} />
-          </p>
+          </div>
           <ProjectsButton />
         </div>
       </div>
@@ -281,7 +279,7 @@ function StackPanel({ projectsData }) {
 function ProjectSection({ title, bgColor, microBg, cardTextColor, projects }) {
   return (
     <div
-      className={`min-h-[calc(100vh-3rem)] flex flex-col justify-between relative pt-8 xl:pt-16  ${bgColor}`}
+      className={`flex flex-col justify-between relative pt-8 xl:pt-16  ${bgColor}`}
     >
       <div className="pl-max 2xl:-left-4 relative">
         <h1 className="relative font-bebas-neue font-black text-shadow-xs text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl z-10">
@@ -330,14 +328,25 @@ function ProjectCard({ index, project, microBg, cardTextColor }) {
         {/* <div className="absolute h-20 bottom-1 w-full scale-103 bg-gradient-to-b from-neutral-50/0 to-neutral-50 z-20 rounded-xl" /> */}
       </div>
 
-      <div className="w-full font-inter flex flex-col justify-between gap-1 lg:gap-2 p-1.5">
+      <div className="w-full font-inter flex flex-col justify-between gap-1 lg:gap-2 py-1.5 px-2">
+        <div className="flex max-w-fit gap-2 ">
+          {project.stack.map((key, i) => (
+            <div
+              className={`h-fit text-[8px] lg:text-xs rounded-xl  ${microBg} ${cardTextColor} py-0.5  px-3  `}
+              key={i}
+            >
+              {key}
+            </div>
+          ))}
+        </div>
+
         <div className="flex justify-between items-center relative">
-          <h2 className="text-base lg:text-2xl font-semibold flex justify-start gap-2 items-center">
+          <h2 className="text-base py-1 lg:text-2xl font-semibold flex justify-start gap-2 items-center">
             <ArrowRight
               strokeWidth="1.7px"
               className={`size-6 -left-12 group-hover:left-0  relative group-hover:block  transition-all duration-300 ease-in-out `}
             />
-            <p className="relative -left-8 group-hover:left-0 transition-all duration-300 ease-in-out ">
+            <p className="relative -left-8 group-hover:left-0 transition-all duration-300 ease-in-out group-hover:underline underline-offset-4">
               {project.name}
             </p>
           </h2>
@@ -355,18 +364,7 @@ function ProjectCard({ index, project, microBg, cardTextColor }) {
           {project.description}
         </p>
 
-        <div className="flex max-w-fit gap-2 ">
-          {project.stack.map((key, i) => (
-            <div
-              className={`h-fit text-[8px] lg:text-xs rounded-xl  ${microBg} ${cardTextColor} py-0.5  px-3  `}
-              key={i}
-            >
-              {key}
-            </div>
-          ))}
-        </div>
-
-        <div className="relative pl-1 flex justify-between text-[10px] lg:text-sm px-2 text-neutral-500">
+        <div className="relative pt-4 pl-1 flex justify-between text-[10px] lg:text-sm px-2 text-neutral-500">
           <span className="flex gap-4">
             <p className="flex gap-2">
               <Star size={16} /> 8

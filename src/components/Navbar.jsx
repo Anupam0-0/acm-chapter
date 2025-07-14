@@ -8,7 +8,7 @@ const Links = [
   { name: "Events", link: "/events" },
   { name: "Team", link: "/team" },
   { name: "Gallery", link: "/gallery" },
-  { name: "Notice", link: "/notice" },
+  { name: "Newsletter", link: "/newsletter" },
   { name: "Contact", link: "/contact" },
 ];
 
@@ -45,13 +45,12 @@ const Navbar = () => {
             <Link
               key={index}
               to={link.link}
-              layout
               className="group text-sm tracking-wide font-inter text-black/80 group transition ease-in-out duration-300 relative px-3"
             >
               {link.name}
               <motion.span
-                layout
-              className="absolute left-0 w-0 h-[1px] group-hover:w-full -bottom-4 bg-blue-500/90 transtition ease-in-out duration-300"></motion.span>
+                className="absolute left-0 w-0 h-[1px] group-hover:w-full -bottom-4 bg-blue-500/90 transtition ease-in-out duration-300"
+              ></motion.span>
             </Link>
           ))}
         </div>

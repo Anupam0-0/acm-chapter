@@ -6,7 +6,7 @@ export default function ScrollProgress() {
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (v) => {
-      console.log("Scroll Progress:", v); // value from 0 to 1
+      // console.log("Scroll Progress:", v); // value from 0 to 1
     });
 
     return () => unsubscribe();

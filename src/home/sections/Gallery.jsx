@@ -1,8 +1,8 @@
 import React from "react";
 
-import img from "/public/img.jpg";
-import img1 from "/public/astro.jpg";
-import img2 from "/public/img2.jpg";
+import img from "/src/assets/img.jpg";
+import img1 from "/src/assets/astro.jpg";
+import img2 from "/src/assets/img2.jpg";
 
 // Array of gallery rows with image and animation direction
 const galleryRows = [
