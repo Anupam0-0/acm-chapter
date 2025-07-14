@@ -13,7 +13,7 @@ export default function HorizontalScroll() {
 
   return (
     <div ref={targetRef} className="relative h-[600vh]">
-      <div className="sticky flex flex-col justify-between h-[100dvh] top-8 py-16 2xl:py-20 overflow-hidden ">
+      <div className="sticky flex flex-col 4xl:gap-40 justify-between h-[100dvh] top-8 py-16 2xl:py-20 4xl:py-30 overflow-hidden ">
         {/* title */}
         <PreviousEventsHeader />
         {/* List of events */}
@@ -22,11 +22,11 @@ export default function HorizontalScroll() {
           className="relative top-6 flex gap-7 3xl:gap-16 h-full w-[100vw] my-10 lg:my-16 2xl:my-20"
         >
           {PastEvents.map((event, i) => (
-            <BlurFade delay={0.1} key={i} inView>
+            <BlurFade key={i} inView>
               <motion.div
                 key={i}
                 whileHover={{ y: -15 }}
-                className={`w-full h-full  relative aspect-video  cursor-pointer group `}
+                className={`w-full h-full max-h-[60rem] relative aspect-video  cursor-pointer group `}
               >
                 <img
                   src={event.image}
@@ -72,11 +72,11 @@ function PreviousEventsHeader() {
     <div ref={targetRef} className="px-max">
       <motion.h1
         style={{ x }}
-        className="absolute font-outline-4 font-bebas-neue top-0 right-0 text-[14rem] italic text-neutral-50 whitespace-nowrap"
+        className="absolute font-outline-4 font-bebas-neue top-0 4xl:top-10 right-0 text-[14rem] italic text-neutral-50 whitespace-nowrap"
       >
         Previous Events
       </motion.h1>
-      <h1 className="font-black w-fit font-bebas-neue mt-1 text-shadow-xs tracking-wide text-heading  relative">
+      <h1 className="font-black w-fit font-bebas-neue text-shadow-xs tracking-wide text-heading relative top-8">
         <TextAnimate animation="blurIn" as="h1" by="character" delay={0.3}>
           Previous events
         </TextAnimate>
@@ -97,14 +97,14 @@ function PreviousEventsHeader() {
 
 const PastEvents = [
   {
-    image: "/public/astro.jpg",
+    image: "/src/assets/astro.jpg",
     title: "The Legend of Zelda",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
     date: "30 Feb 2023",
   },
   {
-    image: "/public/savage.jpg",
+    image: "/src/assets/savage.jpg",
     title: "Super Mario",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
@@ -112,7 +112,7 @@ const PastEvents = [
     date: "15 Mar 2023",
   },
   {
-    image: "/public/img.jpg",
+    image: "/src/assets/img.jpg",
     title: "Call of Duty",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
@@ -120,7 +120,7 @@ const PastEvents = [
     date: "20 Apr 2023",
   },
   {
-    image: "/public/img1.jpg",
+    image: "/src/assets/img1.jpg",
     title: "Pokémon",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
@@ -128,7 +128,7 @@ const PastEvents = [
     date: "10 May 2023",
   },
   {
-    image: "/public/img2.jpg",
+    image: "/src/assets/img2.jpg",
     title: "Final Fantasy",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
@@ -136,7 +136,7 @@ const PastEvents = [
     date: "25 Jun 2023",
   },
   {
-    image: "/public/img3.jpg",
+    image: "/src/assets/img3.jpg",
     title: "Minecraft",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
@@ -144,14 +144,14 @@ const PastEvents = [
     date: "05 Jul 2023",
   },
   {
-    image: "/public/arco.jpg",
+    image: "/src/assets/arco.jpg",
     title: "Grand Theft Auto",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",
     date: "18 Aug 2023",
   },
   {
-    image: "/public/astro.jpg",
+    image: "/src/assets/astro.jpg",
     title: "Counter-Strike",
     description:
       "An epic adventure in the world of Hyrule. Join Link as he battles Ganon to save Princess Zelda.",

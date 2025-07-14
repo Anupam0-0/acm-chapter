@@ -3,12 +3,12 @@ import { motion, useMotionValue } from "framer-motion";
 import { TextAnimate } from "./magicui/TextAnimate";
 
 const imgs = [
-  "/public/img.jpg",
-  "/public/img1.jpg",
-  "/public/img2.jpg",
-  "/public/img3.jpg",
-  "/public/savage.jpg",
-  "/public/astro.jpg",
+  "/src/assets/img.jpg",
+  "/src/assets/img1.jpg",
+  "/src/assets/img2.jpg",
+  "/src/assets/img3.jpg",
+  "/src/assets/savage.jpg",
+  "/src/assets/astro.jpg",
 ];
 
 const ONE_SECOND = 1000;
@@ -127,7 +127,7 @@ const Dots = ({ imgIndex, setImgIndex }) => {
 function PreviousEventsHeader() {
   return (
     <div className="px-max">
-      <h1 className="font-black w-fit font-bebas-neue text-5xl text-shadow-xs sm:text-6xl md:text-[5rem] relative">
+      <h1 className="font-black w-fit font-bebas-neue text-heading px-1 text-shadow-xs relative">
         <TextAnimate animation="blurIn" as="h1" by="character" delay={0.3}>
           Previous events
         </TextAnimate>

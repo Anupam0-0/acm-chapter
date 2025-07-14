@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import HighlightGrid from "../../components/HighlightGrid";
-import { AuroraText } from "../../components/magicui/AuroraText";
+import HighlightGrid from "./HighlightGrid";
+import { AuroraText } from "../magicui/AuroraText";
 
 const Hightlights = () => {
   return (
-    <div className="min-h-screen text-2xl w-full py-16 px-max overflow-x-clip">
+    <div className=" text-2xl w-full py-16 px-max overflow-x-clip">
       <HighlightHeader />
       <HighlightGrid />
     </div>
@@ -29,7 +29,7 @@ function HighlightHeader() {
     >
       <motion.h1
         style={{ x, y }}
-        className="absolute font-outline-4 font-bebas-neue -top-32 right-0 text-[14rem] italic text-neutral-50 whitespace-nowrap"
+        className="absolute hidden md:block font-outline-4 font-bebas-neue -top-32 right-0 text-[14rem] italic text-neutral-50 whitespace-nowrap"
       >
         Our Achievements
       </motion.h1>
@@ -39,7 +39,7 @@ function HighlightHeader() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1, duration: 0.3, ease: "easeInOut" }}
-        className="font-black pr-4 w-fit font-bebas-neue text-heading relative whitespace-nowrap text-neutral-900"
+        className="text-4xl font-black pr-4 w-fit font-bebas-neue text-heading relative whitespace-nowrap text-neutral-900"
       >
         Our <AuroraText>Achievements</AuroraText>
       </motion.h1>

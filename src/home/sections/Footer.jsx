@@ -8,8 +8,8 @@ const Footer = () => {
     <div className="">
       <div className="mb-[calc(100vh-4.05rem)]"></div>
 
-      <div className="h-[calc(100vh-4rem)] grid grid-rows-6 w-full fixed bottom-0 bg-neutral-950 text-neutral-400/90 -z-10 px-max ">
-        <div className="row-span-5 pt-4 border-y-2 border-neutral-800">
+      <div className="min-h-[calc(100vh-4rem)] grid grid-rows-6 w-full md:fixed bottom-0 bg-neutral-950 text-neutral-400/90 -z-10 px-max ">
+        <div className="row-span-5 pt-4 border-y-2 border-neutral-800 px-max">
           <FooterComponent />
         </div>
         <div className="row-span-1">
@@ -24,7 +24,7 @@ export default Footer;
 
 function FooterComponent() {
   return (
-    <div className="w-full text-xs lg:text-sm 2xl:text-base grid grid-cols-4 py-10 2xl:py-20 font-inter ">
+    <div className="w-full text-xs lg:text-sm 2xl:text-base grid grid-cols-1 md:grid-cols-4 gap-10 py-10 2xl:py-20 font-inter ">
       {/* LOGO */}
       <div className="h-full w-full col-span-1 text-blue-500 text-6xl font-bebas-neue ">
         ACM <span className="text-neutral-100">XIM </span>{" "}
@@ -88,7 +88,7 @@ function FooterComponent() {
 
 function FooterComponent2() {
   return (
-    <div className="h-full w-full flex justify-between items-center font-inter text-xs lg:text-sm 2xl:text-base ">
+    <div className="px-2 flex flex-col md:flex-row h-full w-full justify-evenly md:items-center font-inter text-[0.7rem] md:text-sm 2xl:text-base">
       {/* SOCIALS */}
       <div className="flex gap-5">
         <div>Follow us: </div>
@@ -112,7 +112,7 @@ function FooterComponent2() {
       </div>
 
       {/* CREDITS */}
-      <div className="capitalize flex gap-16">
+      <div className="capitalize flex justify-between gap-16">
         <div>© 2025 ACM </div>
         <div>
           Made with ❤️ by{" "}

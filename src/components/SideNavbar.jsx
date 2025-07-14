@@ -51,7 +51,7 @@ function SideNavbar({ isOpen, setIsOpen }) {
       <div className=" w-full mx-auto flex flex-col gap-4 h-full items-start justify-between py-1 xl:py-2 3xl:py-4 px-4 sm:px-6">
         <motion.div
           layout
-          className={`w-full min-h-[50%] md:min-h-[55%] h-full block ${navImage} rounded-2xl mt-1 md:mt-2 relative`}
+          className={`w-full md:min-h-[55%] h-full block ${navImage} rounded-2xl mt-1 md:mt-2 relative`}
         >
           <X
             onClick={() => {

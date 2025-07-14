@@ -3,8 +3,8 @@ import { motion, useMotionValue } from "framer-motion";
 import { TextAnimate } from "./magicui/TextAnimate";
 
 const imgs = [
-  "/public/arco.jpg",
-  "/public/mario.jpg",
+  "/src/assets/arco.jpg",
+  "/src/assets/mario.jpg",
 ];
 
 const ONE_SECOND = 1000;
@@ -123,7 +123,7 @@ const Dots = ({ imgIndex, setImgIndex }) => {
 function UpcomingEventsHeader() {
   return (
     <div className="px-max">
-      <h1 className="font-black w-fit font-bebas-neue text-5xl text-shadow-xs sm:text-6xl md:text-[5rem] relative">
+      <h1 className="font-black w-fit font-bebas-neue  text-shadow-xs  text-heading px-1 relative">
         <TextAnimate animation="blurIn" as="h1" by="character" delay={0.3}>
           Upcoming events
         </TextAnimate>
@@ -132,7 +132,7 @@ function UpcomingEventsHeader() {
           whileInView={{ width: "100%" }}
           // viewport={{ once: true }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="absolute left-0 bottom-0 h-1 bg-blue-500 rounded-full"
+          className="absolute left-0 bottom-0 h-1  bg-blue-500 rounded-full"
         />
       </h1>
     </div>
