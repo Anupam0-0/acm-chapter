@@ -346,7 +346,7 @@ function ProjectCard({ index, project, microBg, cardTextColor }) {
               strokeWidth="1.7px"
               className={`size-6 -left-12 group-hover:left-0  relative group-hover:block  transition-all duration-300 ease-in-out `}
             />
-            <p className="relative -left-8 group-hover:left-0 transition-all duration-300 ease-in-out group-hover:underline underline-offset-4">
+            <p className="relative -left-8 group-hover:left-0 transition-all duration-300 ease-in-out ">
               {project.name}
             </p>
           </h2>
