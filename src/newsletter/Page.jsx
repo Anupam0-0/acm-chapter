@@ -1,20 +1,19 @@
-import React from 'react'
-import FooterNavigation from './components/FooterNavigation'
-import Header from './components/Header'
-import Main from './components/Main'
-
+import React from "react";
+import FooterNavigation from "./components/FooterNavigation";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 const Page = () => {
   return (
-    <div className='min-h-screen min-w-[100rem] bg-gradient-to-b from-blue-50 to-neutral-50 mx-auto px-max text-2xl w-full p-10 relative'>
-      <Header />
-      <Main />
+    <div className="bg-gradient-to-b from-blue-50 to-neutral-50 mx-auto px-max text-2xl w-full relative">
+      <div className="max-w-[100rem]">
+        <Header />
+        <Main />
+      </div>
+
       <FooterNavigation />
     </div>
-  )
-}
+  );
+};
 
-
-
-
-export default Page
+export default Page;
