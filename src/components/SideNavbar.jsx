@@ -21,10 +21,10 @@ const SideNavLinks = [
 ];
 
 const Socials = [
-  { icon: <LinkedinIcon />, hoverColor:"hover:text-sky-600" ,  link: "" },
-  { icon: <InstagramIcon />, hoverColor:"hover:text-pink-500" ,  link: "" },
-  { icon: <TwitterIcon />, hoverColor:"hover:text-blue-600" ,  link: "" },
-  { icon: <YoutubeIcon />, hoverColor:"hover:text-red-500" ,  link: "" },
+  { icon: <LinkedinIcon />, hoverColor: "hover:text-sky-600", link: "" },
+  { icon: <InstagramIcon />, hoverColor: "hover:text-pink-500", link: "" },
+  { icon: <TwitterIcon />, hoverColor: "hover:text-blue-600", link: "" },
+  { icon: <YoutubeIcon />, hoverColor: "hover:text-red-500", link: "" },
 ];
 
 function SideNavbar({ isOpen, setIsOpen }) {
@@ -49,10 +49,11 @@ function SideNavbar({ isOpen, setIsOpen }) {
       }  z-50 overflow-hidden flex flex-col justify-between transition-all ease-in-out duration-500 shadow-2xl/30 `}
     >
       <div className=" w-full mx-auto flex flex-col gap-4 h-full items-start justify-between py-1 xl:py-2 3xl:py-4 px-4 sm:px-6">
-        <motion.div
-          layout
-          className={`w-full md:min-h-[55%] h-full  ${navImage} rounded-2xl mt-1 md:mt-2 relative`}
-        >
+        <motion.div className="w-full md:min-h-[55%] h-full rounded-2xl mt-1 md:mt-2 relative">
+          <motion.div
+            layout
+            className={`hidden md:block ${navImage} rounded-2xl absolute inset-0`}
+          ></motion.div>
           <X
             onClick={() => {
               setIsOpen(!isOpen);
